@@ -1,13 +1,10 @@
-// ===================================
-// DADOS DE USUÁRIOS PRÉ-CONFIGURADOS
-// ===================================
 
 const users = {
   // Alunos
   aluno1: {
     id: 'ALU001',
     name: 'João Silva Santos',
-    email: 'joao.silva@colegio.edu.br',
+    email: 'joao.silva@escola.pr.gov.br',
     password: '123456',
     role: 'student',
     class: '3º Ano - Turma A',
@@ -34,7 +31,7 @@ const users = {
   aluno2: {
     id: 'ALU002',
     name: 'Maria Oliveira Costa',
-    email: 'maria.oliveira@colegio.edu.br',
+    email: 'maria.oliveira@escola.pr.gov.br',
     password: '123456',
     role: 'student',
     class: '2º Ano - Turma B',
@@ -63,7 +60,7 @@ const users = {
   prof1: {
     id: 'PROF001',
     name: 'Dr. Roberto Alves Martins',
-    email: 'roberto.martins@colegio.edu.br',
+    email: 'roberto.martins@escola.pr.gov.br',
     password: '123456',
     role: 'teacher',
     department: 'Ciências Exatas',
@@ -79,7 +76,7 @@ const users = {
   prof2: {
     id: 'PROF002',
     name: 'Dra. Fernanda Souza Lima',
-    email: 'fernanda.souza@colegio.edu.br',
+    email: 'fernanda.souza@escola.pr.gov.br',
     password: '123456',
     role: 'teacher',
     department: 'Linguagens e Códigos',
@@ -93,10 +90,6 @@ const users = {
     students: 92
   }
 };
-
-// ===================================
-// FUNÇÕES DE AUTENTICAÇÃO
-// ===================================
 
 function login(email, password, role) {
   // Procurar usuário nos dados
@@ -132,10 +125,6 @@ function checkAuth() {
     window.location.href = '/index.html';
   }
 }
-
-// ===================================
-// ATUALIZAR INTERFACE COM USUÁRIO
-// ===================================
 
 function updateUserInterface() {
   const user = getCurrentUser();

@@ -1,6 +1,4 @@
-/* ===================================
-   CORES DO COLÉGIO CÍVICO-MILITAR
-   =================================== */
+
 :root {
   --primary-blue: #1a3a52;      /* Azul Marinho */
   --secondary-blue: #2d5a7b;    /* Azul Médio */
@@ -12,9 +10,6 @@
   --text-gray: #666666;
 }
 
-/* ===================================
-   RESET E ESTILOS GLOBAIS
-   =================================== */
 * {
   margin: 0;
   padding: 0;
@@ -42,9 +37,6 @@ a:hover {
   color: var(--accent-gold);
 }
 
-/* ===================================
-   HEADER E NAVEGAÇÃO
-   =================================== */
 header {
   background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
   color: var(--white);
@@ -139,9 +131,6 @@ nav a:hover {
   color: var(--primary-blue);
 }
 
-/* ===================================
-   HERO SECTION
-   =================================== */
 .hero {
   background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
   color: var(--white);
@@ -188,9 +177,6 @@ nav a:hover {
   flex-wrap: wrap;
 }
 
-/* ===================================
-   SEÇÕES PRINCIPAIS
-   =================================== */
 section {
   padding: 4rem 2rem;
   max-width: 1200px;
@@ -218,9 +204,6 @@ section {
   border-radius: 2px;
 }
 
-/* ===================================
-   CARDS
-   =================================== */
 .cards-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -269,9 +252,6 @@ section {
   padding: 0 2rem 2rem;
 }
 
-/* ===================================
-   FORMULÁRIOS
-   =================================== */
 .form-container {
   background: var(--light-gray);
   padding: 3rem;
@@ -329,9 +309,6 @@ select:focus {
   font-weight: 400;
 }
 
-/* ===================================
-   PERFIL
-   =================================== */
 .profile-container {
   max-width: 900px;
   margin: 2rem auto;
@@ -415,9 +392,6 @@ select:focus {
   font-size: 1.1rem;
 }
 
-/* ===================================
-   FOOTER
-   =================================== */
 footer {
   background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
   color: var(--white);
@@ -462,9 +436,6 @@ footer {
   font-size: 0.9rem;
 }
 
-/* ===================================
-   RESPONSIVIDADE
-   =================================== */
 @media (max-width: 768px) {
   .header-container {
     flex-direction: column;
@@ -506,9 +477,6 @@ footer {
   }
 }
 
-/* ===================================
-   UTILITÁRIOS
-   =================================== */
 .text-center {
   text-align: center;
 }
