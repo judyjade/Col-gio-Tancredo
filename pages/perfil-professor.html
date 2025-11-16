@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Perfil - Professor</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <div class="logo-icon">🎓</div>
+        <div>
+          <div style="font-size: 0.9rem; opacity: 0.9;">Colégio Estadual</div>
+          <div>Tancredo de Almeida Neves</div>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="#perfil">Perfil</a></li>
+          <li><a href="#info">Informações</a></li>
+          <li><a href="#disciplinas">Disciplinas</a></li>
+          <li><a href="#turmas">Turmas</a></li>
+        </ul>
+      </nav>
+      <div class="auth-buttons">
+        <span style="color: white; display: flex; align-items: center; gap: 0.5rem;" id="userDisplay"></span>
+        <button class="btn btn-secondary" onclick="logout()">Sair</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MENU LATERAL DE NAVEGAÇÃO -->
+  <div style="display: flex; max-width: 1200px; margin: 0 auto; gap: 2rem; padding: 2rem;">
+    <!-- SIDEBAR -->
+    <div style="width: 200px; position: sticky; top: 100px; height: fit-content;">
+      <div style="background: var(--light-gray); padding: 1.5rem; border-radius: 10px; border-left: 4px solid var(--accent-gold);">
+        <h4 style="color: var(--primary-blue); margin-bottom: 1rem; font-size: 1rem;">📑 Seções</h4>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem;">
+          <li><a href="#perfil" style="display: block; padding: 0.5rem; color: var(--primary-blue); border-radius: 5px; transition: all 0.3s;" onmouseover="this.style.backgroundColor='var(--accent-gold)'; this.style.color='white';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='var(--primary-blue)';">👔 Informações Profissionais</a></li>
+          <li><a href="#info" style="display: block; padding: 0.5rem; color: var(--primary-blue); border-radius: 5px; transition: all 0.3s;" onmouseover="this.style.backgroundColor='var(--accent-gold)'; this.style.color='white';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='var(--primary-blue)';">🎓 Formação e Experiência</a></li>
+          <li><a href="#disciplinas" style="display: block; padding: 0.5rem; color: var(--primary-blue); border-radius: 5px; transition: all 0.3s;" onmouseover="this.style.backgroundColor='var(--accent-gold)'; this.style.color='white';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='var(--primary-blue)';">📚 Disciplinas</a></li>
+          <li><a href="#turmas" style="display: block; padding: 0.5rem; color: var(--primary-blue); border-radius: 5px; transition: all 0.3s;" onmouseover="this.style.backgroundColor='var(--accent-gold)'; this.style.color='white';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='var(--primary-blue)';">👥 Turmas</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <div style="flex: 1;">
+      <!-- PERFIL DO PROFESSOR -->
+      <div class="profile-container">
+        <div class="profile-header">
+          <div class="profile-avatar">👨‍🏫</div>
+          <h1 class="profile-name" id="teacherName">Nome do Professor</h1>
+          <p class="profile-role" id="teacherDepartment">Departamento</p>
+        </div>
+
+        <div class="profile-body">
+          <!-- INFORMAÇÕES PROFISSIONAIS -->
+          <div class="profile-section" id="perfil">
+            <h3>👔 Informações Profissionais</h3>
+            <div class="info-row">
+              <div class="info-item">
+                <div class="info-label">ID do Professor</div>
+                <div class="info-value" id="teacherId">-</div>
+              </div>
+              <div class="info-item">
+                <div class="info-label">Departamento</div>
+                <div class="info-value" id="department">-</div>
+              </div>
+            </div>
+            <div class="info-row">
+              <div class="info-item">
+                <div class="info-label">Email</div>
+                <div class="info-value" id="email">-</div>
+              </div>
+              <div class="info-item">
+                <div class="info-label">Telefone</div>
+                <div class="info-value" id="phone">-</div>
+              </div>
+            </div>
+            <div class="info-row">
+              <div class="info-item">
+                <div class="info-label">Sala/Escritório</div>
+                <div class="info-value" id="office">-</div>
+              </div>
+              <div class="info-item">
+                <div class="info-label">Horário de Atendimento</div>
+                <div class="info-value" id="officeHours">-</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- FORMAÇÃO E EXPERIÊNCIA -->
+          <div class="profile-section" id="info">
+            <h3>🎓 Formação e Experiência</h3>
+            <div class="info-row">
+              <div class="info-item">
+                <div class="info-label">Experiência</div>
+                <div class="info-value" id="experience">-</div>
+              </div>
+              <div class="info-item">
+                <div class="info-label">Formação Acadêmica</div>
+                <div class="info-value" id="education">-</div>
+              </div>
+            </div>
+            <div class="info-row">
+              <div class="info-item">
+                <div class="info-label">Total de Alunos</div>
+                <div class="info-value" style="font-size: 1.5rem; color: var(--accent-gold); font-weight: bold;" id="totalStudents">-</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- DISCIPLINAS -->
+          <div class="profile-section" id="disciplinas">
+            <h3>📚 Disciplinas que Leciona</h3>
+            <div id="subjectsContainer"></div>
+          </div>
+
+          <!-- TURMAS -->
+          <div class="profile-section" id="turmas">
+            <h3>👥 Turmas</h3>
+            <div id="classesContainer"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Sobre o Colégio</h4>
+        <ul>
+          <li><a href="../index.html#sobre">Sobre Nós</a></li>
+          <li><a href="../index.html#servicos">Serviços</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Acesso Rápido</h4>
+        <ul>
+          <li><a href="login-aluno.html">Login Aluno</a></li>
+          <li><a href="login-professor.html">Login Professor</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contato</h4>
+        <ul>
+          <li>Email: contato@colegio.edu.br</li>
+          <li>Telefone: (45) 3521-1234</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Colégio Estadual Cívico-Militar Tancredo de Almeida Neves. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="../js/auth.js"></script>
+  <script>
+    // Verificar autenticação
+    checkAuth();
+
+    // Obter dados do usuário
+    const user = getCurrentUser();
+
+    // Preencher informações profissionais
+    document.getElementById('teacherName').textContent = user.name;
+    document.getElementById('teacherDepartment').textContent = user.department;
+    document.getElementById('userDisplay').textContent = '👤 ' + user.name.split(' ')[0];
+    document.getElementById('teacherId').textContent = user.id;
+    document.getElementById('department').textContent = user.department;
+    document.getElementById('email').textContent = user.email;
+    document.getElementById('phone').textContent = user.phone;
+    document.getElementById('office').textContent = user.office;
+    document.getElementById('officeHours').textContent = user.officeHours;
+    document.getElementById('experience').textContent = user.experience;
+    document.getElementById('education').textContent = user.education;
+    document.getElementById('totalStudents').textContent = user.students;
+
+    // Preencher disciplinas
+    const subjectsContainer = document.getElementById('subjectsContainer');
+    let subjectsHTML = '<div style="display: flex; flex-wrap: wrap; gap: 1rem;">';
+    user.subjects.forEach(subject => {
+      subjectsHTML += `
+        <div style="background: var(--light-gray); padding: 1rem 1.5rem; border-radius: 5px; border-left: 4px solid var(--accent-gold); font-weight: 500; color: var(--primary-blue);">
+          ${subject}
+        </div>
+      `;
+    });
+    subjectsHTML += '</div>';
+    subjectsContainer.innerHTML = subjectsHTML;
+
+    // Preencher turmas
+    const classesContainer = document.getElementById('classesContainer');
+    let classesHTML = '<div style="display: grid; gap: 1rem;">';
+    user.classes.forEach(className => {
+      classesHTML += `
+        <div class="info-item">
+          <div class="info-label">Turma</div>
+          <div class="info-value">${className}</div>
+        </div>
+      `;
+    });
+    classesHTML += '</div>';
+    classesContainer.innerHTML = classesHTML;
+  </script>
+</body>
+</html>

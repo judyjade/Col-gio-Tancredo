@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Professor - Colégio Estadual Cívico-Militar</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <div class="logo-icon">🎓</div>
+        <div>
+          <div style="font-size: 0.9rem; opacity: 0.9;">Colégio Estadual</div>
+          <div>Tancredo de Almeida Neves</div>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../index.html#sobre">Sobre</a></li>
+          <li><a href="../index.html#servicos">Serviços</a></li>
+        </ul>
+      </nav>
+      <div class="auth-buttons">
+        <a href="../index.html" class="btn btn-secondary">Voltar</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- SEÇÃO DE LOGIN -->
+  <section style="padding: 4rem 2rem; background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%); min-height: 80vh; display: flex; align-items: center;">
+    <div class="form-container">
+      <h2 style="text-align: center; color: var(--primary-blue); margin-bottom: 2rem;">Login do Professor</h2>
+      
+      <div id="alertContainer"></div>
+
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required placeholder="seu.email@colegio.edu.br">
+        </div>
+
+        <div class="form-group">
+          <label for="password">Senha</label>
+          <input type="password" id="password" name="password" required placeholder="Digite sua senha">
+        </div>
+
+        <div class="form-group checkbox">
+          <input type="checkbox" id="remember" name="remember">
+          <label for="remember">Lembrar-me neste dispositivo</label>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem; font-size: 1rem;">Entrar</button>
+      </form>
+
+      <hr style="margin: 2rem 0; border: none; border-top: 1px solid #ddd;">
+
+      <p style="text-align: center; color: var(--text-gray); margin-bottom: 1rem;">
+        Credenciais de teste:
+      </p>
+      <div style="background: #f0f0f0; padding: 1rem; border-radius: 5px; font-size: 0.9rem; margin-bottom: 1rem;">
+        <p><strong>Email:</strong> roberto.martins@colegio.edu.br</p>
+        <p><strong>Senha:</strong> 123456</p>
+        <p style="margin-top: 0.5rem;"><strong>ou</strong></p>
+        <p><strong>Email:</strong> fernanda.souza@colegio.edu.br</p>
+        <p><strong>Senha:</strong> 123456</p>
+      </div>
+
+      <p style="text-align: center; color: var(--text-gray);">
+        Problemas para entrar? <a href="../index.html#contato">Entre em contato conosco</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Sobre o Colégio</h4>
+        <ul>
+          <li><a href="../index.html#sobre">Sobre Nós</a></li>
+          <li><a href="../index.html#servicos">Serviços</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Acesso Rápido</h4>
+        <ul>
+          <li><a href="login-aluno.html">Login Aluno</a></li>
+          <li><a href="login-professor.html">Login Professor</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contato</h4>
+        <ul>
+          <li>Email: contato@colegio.edu.br</li>
+          <li>Telefone: (45) 3521-1234</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Colégio Estadual Cívico-Militar Tancredo de Almeida Neves. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="../js/auth.js"></script>
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const alertContainer = document.getElementById('alertContainer');
+
+      const result = login(email, password, 'teacher');
+
+      if (result.success) {
+        alertContainer.innerHTML = '<div class="alert alert-success">✓ Login realizado com sucesso! Redirecionando...</div>';
+        setTimeout(() => {
+          window.location.href = 'perfil-professor.html';
+        }, 1500);
+      } else {
+        alertContainer.innerHTML = '<div class="alert alert-error">✗ ' + result.message + '</div>';
+      }
+    });
+  </script>
+</body>
+</html>
