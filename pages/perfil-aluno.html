@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+  <!-- HEADER -->
   <header>
     <div class="header-container">
       <div class="logo">
@@ -19,106 +20,116 @@
       <nav>
         <ul>
           <li><a href="../index.html">Home</a></li>
-          <li><a href="#perfil">Perfil</a></li>
-          <li><a href="#notas">Notas</a></li>
-          <li><a href="#horario">Horário</a></li>
-          <li><a href="#disciplinas">Disciplinas</a></li>
+          <li><a href="melhores-alunos.html">Melhores Alunos</a></li>
+          <li><a href="professores.html">Professores</a></li>
         </ul>
       </nav>
       <div class="auth-buttons">
         <span style="color: white; display: flex; align-items: center; gap: 0.5rem;" id="userDisplay"></span>
         <button class="btn btn-secondary" onclick="logout()">Sair</button>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="../index.html">Home</a>
+        <a href="melhores-alunos.html">Melhores Alunos</a>
+        <a href="professores.html">Professores</a>
+        <a href="#perfil">Perfil</a>
+        <a href="#notas">Notas</a>
+        <button class="btn btn-secondary" onclick="logout()" style="width: 100%; text-align: center; border: 2px solid var(--white); background: transparent; color: white; cursor: pointer; padding: 0.8rem; border-radius: 5px; margin-top: 1rem;">Sair</button>
       </div>
     </div>
   </header>
 
+  <!-- CONTEÚDO PRINCIPAL -->
   <div style="display: flex; max-width: 1200px; margin: 0 auto; gap: 2rem; padding: 2rem;">
-    <div style="width: 200px; position: sticky; top: 100px; height: fit-content;">
-      <div style="background: var(--light-gray); padding: 1.5rem; border-radius: 10px; border-left: 4px solid var(--accent-gold);">
-        <h4 style="color: var(--primary-blue); margin-bottom: 1rem; font-size: 1rem;">📑 Seções</h4>
-        <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem;">
-          <li><a href="#perfil" style="display: block; padding: 0.5rem; color: var(--primary-blue); border-radius: 5px; transition: all 0.3s;" onmouseover="this.style.backgroundColor='var(--accent-gold)'; this.style.color='white';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='var(--primary-blue)';">📋 Informações Pessoais</a></li>
-          <li><a href="#notas" style="display: block; padding: 0.5rem; color: var(--primary-blue); border-radius: 5px; transition: all 0.3s;" onmouseover="this.style.backgroundColor='var(--accent-gold)'; this.style.color='white';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='var(--primary-blue)';">📊 Notas e Desempenho</a></li>
-          <li><a href="#horario" style="display: block; padding: 0.5rem; color: var(--primary-blue); border-radius: 5px; transition: all 0.3s;" onmouseover="this.style.backgroundColor='var(--accent-gold)'; this.style.color='white';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='var(--primary-blue)';">⏰ Horário de Aulas</a></li>
-          <li><a href="#disciplinas" style="display: block; padding: 0.5rem; color: var(--primary-blue); border-radius: 5px; transition: all 0.3s;" onmouseover="this.style.backgroundColor='var(--accent-gold)'; this.style.color='white';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='var(--primary-blue)';">📚 Disciplinas</a></li>
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <div class="sidebar-box">
+        <h4>📑 Seções</h4>
+        <ul>
+          <li><a href="#perfil">👤 Informações</a></li>
+          <li><a href="#notas">📊 Notas</a></li>
+          <li><a href="#ajuda">🆘 Solicitar Ajuda</a></li>
         </ul>
       </div>
     </div>
 
+    <!-- CONTEÚDO -->
     <div style="flex: 1;">
-      <div class="profile-container">
-        <div class="profile-header">
-          <div class="profile-avatar">👤</div>
-          <h1 class="profile-name" id="studentName">Nome do Aluno</h1>
-          <p class="profile-role" id="studentClass">Turma</p>
+      <!-- SEÇÃO INFORMAÇÕES PESSOAIS -->
+      <div class="profile-section" id="perfil">
+        <h3>👤 Minhas Informações</h3>
+        <div class="info-row">
+          <div class="info-item">
+            <div class="info-label">Nome</div>
+            <div class="info-value" id="studentName"></div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">Série</div>
+            <div class="info-value" id="studentClass"></div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">Matrícula</div>
+            <div class="info-value" id="enrollment"></div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">Data de Nascimento</div>
+            <div class="info-value" id="birthDate"></div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">Email</div>
+            <div class="info-value" id="email"></div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">Telefone</div>
+            <div class="info-value" id="phone"></div>
+          </div>
         </div>
+      </div>
 
-        <div class="profile-body">
-          <div class="profile-section" id="perfil">
-            <h3>📋 Informações Pessoais</h3>
-            <div class="info-row">
-              <div class="info-item">
-                <div class="info-label">Matrícula</div>
-                <div class="info-value" id="enrollment">-</div>
-              </div>
-              <div class="info-item">
-                <div class="info-label">Data de Nascimento</div>
-                <div class="info-value" id="birthDate">-</div>
-              </div>
-            </div>
-            <div class="info-row">
-              <div class="info-item">
-                <div class="info-label">Email</div>
-                <div class="info-value" id="email">-</div>
-              </div>
-              <div class="info-item">
-                <div class="info-label">Telefone</div>
-                <div class="info-value" id="phone">-</div>
-              </div>
-            </div>
-            <div class="info-row">
-              <div class="info-item">
-                <div class="info-label">Endereço</div>
-                <div class="info-value" id="address">-</div>
-              </div>
-              <div class="info-item">
-                <div class="info-label">Responsável</div>
-                <div class="info-value" id="guardian">-</div>
-              </div>
-            </div>
-          </div>
+      <!-- SEÇÃO NOTAS -->
+      <div class="profile-section" id="notas">
+        <h3>📊 Minhas Notas</h3>
+        <div id="gradesContainer"></div>
+      </div>
 
-          <div class="profile-section" id="notas">
-            <h3>📊 Notas e Desempenho</h3>
-            <div id="gradesContainer"></div>
-          </div>
-
-          <div class="profile-section" id="horario">
-            <h3>⏰ Horário de Aulas</h3>
-            <div id="scheduleContainer"></div>
-          </div>
-
-          <div class="profile-section" id="disciplinas">
-            <h3>📚 Disciplinas</h3>
-            <div id="subjectsContainer"></div>
-          </div>
+      <!-- SEÇÃO SOLICITAR AJUDA -->
+      <div class="profile-section" id="ajuda">
+        <h3>🆘 Solicitar Ajuda</h3>
+        <p style="margin-bottom: 1.5rem; color: var(--text-gray);">
+          Identifique em quais disciplinas você precisa de ajuda e consulte os melhores alunos e professores.
+        </p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+          <a href="melhores-alunos.html" class="btn btn-primary" style="text-align: center; padding: 1rem;">
+            Ver Melhores Alunos
+          </a>
+          <a href="professores.html" class="btn btn-primary" style="text-align: center; padding: 1rem;">
+            Consultar Professores
+          </a>
         </div>
       </div>
     </div>
   </div>
 
+  <!-- FOOTER -->
   <footer>
     <div class="footer-content">
       <div class="footer-section">
-        <h4>Sobre o Colégio</h4>
+        <h4>Navegação</h4>
         <ul>
-          <li><a href="../index.html#sobre">Sobre Nós</a></li>
-          <li><a href="../index.html#servicos">Serviços</a></li>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="melhores-alunos.html">Melhores Alunos</a></li>
+          <li><a href="professores.html">Professores</a></li>
         </ul>
       </div>
       <div class="footer-section">
         <h4>Acesso Rápido</h4>
         <ul>
+          <li><a href="perfil-aluno.html">Meu Perfil</a></li>
           <li><a href="login-aluno.html">Login Aluno</a></li>
           <li><a href="login-professor.html">Login Professor</a></li>
         </ul>
@@ -128,6 +139,7 @@
         <ul>
           <li>Email: contato@colegio.edu.br</li>
           <li>Telefone: (45) 3521-1234</li>
+          <li>Foz do Iguaçu, PR</li>
         </ul>
       </div>
     </div>
@@ -136,71 +148,7 @@
     </div>
   </footer>
 
-  <script src="../js/auth.js"></script>
-  <script>
-    // Verificar autenticação
-    checkAuth();
-
-    // Obter dados do usuário
-    const user = getCurrentUser();
-
-    // Preencher informações pessoais
-    document.getElementById('studentName').textContent = user.name;
-    document.getElementById('studentClass').textContent = user.class;
-    document.getElementById('userDisplay').textContent = '👤 ' + user.name.split(' ')[0];
-    document.getElementById('enrollment').textContent = user.enrollment;
-    document.getElementById('birthDate').textContent = user.birthDate;
-    document.getElementById('email').textContent = user.email;
-    document.getElementById('phone').textContent = user.phone;
-    document.getElementById('address').textContent = user.address;
-    document.getElementById('guardian').textContent = user.guardian;
-
-    // Preencher notas
-    const gradesContainer = document.getElementById('gradesContainer');
-    let gradesHTML = '<div class="info-row">';
-    let count = 0;
-    for (let subject in user.grades) {
-      const grade = user.grades[subject];
-      gradesHTML += `
-        <div class="info-item">
-          <div class="info-label">${subject}</div>
-          <div class="info-value" style="font-size: 1.5rem; color: var(--accent-gold); font-weight: bold;">${grade}</div>
-        </div>
-      `;
-      count++;
-      if (count % 2 === 0) {
-        gradesHTML += '</div><div class="info-row">';
-      }
-    }
-    gradesHTML += '</div>';
-    gradesContainer.innerHTML = gradesHTML;
-
-    // Preencher horário
-    const scheduleContainer = document.getElementById('scheduleContainer');
-    let scheduleHTML = '<div style="display: grid; gap: 1rem;">';
-    user.schedule.forEach(item => {
-      scheduleHTML += `
-        <div class="info-item">
-          <div class="info-label">${item.day}</div>
-          <div class="info-value">${item.time} - ${item.subjects}</div>
-        </div>
-      `;
-    });
-    scheduleHTML += '</div>';
-    scheduleContainer.innerHTML = scheduleHTML;
-
-    // Preencher disciplinas
-    const subjectsContainer = document.getElementById('subjectsContainer');
-    let subjectsHTML = '<div style="display: flex; flex-wrap: wrap; gap: 1rem;">';
-    user.subjects.forEach(subject => {
-      subjectsHTML += `
-        <div style="background: var(--light-gray); padding: 1rem 1.5rem; border-radius: 5px; border-left: 4px solid var(--accent-gold); font-weight: 500; color: var(--primary-blue);">
-          ${subject}
-        </div>
-      `;
-    });
-    subjectsHTML += '</div>';
-    subjectsContainer.innerHTML = subjectsHTML;
-  </script>
+  <script src="../js/main.js"></script>
+  <script src="../js/perfil-aluno.js"></script>
 </body>
 </html>

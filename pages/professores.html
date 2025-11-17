@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professores - Portal de Ajuda</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <div class="logo-icon">🎓</div>
+        <div>
+          <div style="font-size: 0.9rem; opacity: 0.9;">Colégio Estadual</div>
+          <div>Tancredo de Almeida Neves</div>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="melhores-alunos.html">Melhores Alunos</a></li>
+          <li><a href="professores.html">Professores</a></li>
+          <li><a href="../index.html#contato">Contato</a></li>
+        </ul>
+      </nav>
+      <div class="auth-buttons">
+        <a href="login-professor.html" class="btn btn-primary">Login</a>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="../index.html">Home</a>
+        <a href="melhores-alunos.html">Melhores Alunos</a>
+        <a href="professores.html">Professores</a>
+        <a href="../index.html#contato">Contato</a>
+        <a href="login-professor.html" class="btn btn-primary" style="text-align: center;">Login</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Nossos Professores</h1>
+      <p>Conheça os professores especializados e seus horários de atendimento</p>
+    </div>
+  </section>
+
+  <!-- SEÇÃO PROFESSORES -->
+  <section>
+    <h2 class="section-title">👨‍🏫 Equipe Docente</h2>
+    <div class="student-grid">
+      <div class="student-card">
+        <img src="https://via.placeholder.com/250x350?text=Professor+1" alt="Dr. Roberto Martins" class="student-image">
+        <div class="student-overlay">
+          <h3>Dr. Roberto Martins</h3>
+          <p><strong>Disciplina:</strong> Matemática</p>
+          <p><strong>Sala:</strong> 201</p>
+          <p class="subject">Especialista em Álgebra e Cálculo</p>
+          <p style="margin-top: 1rem; font-size: 0.85rem;">Seg/Qua: 14h-16h</p>
+        </div>
+      </div>
+      <div class="student-card">
+        <img src="https://via.placeholder.com/250x350?text=Professor+2" alt="Dra. Fernanda Souza" class="student-image">
+        <div class="student-overlay">
+          <h3>Dra. Fernanda Souza</h3>
+          <p><strong>Disciplina:</strong> Português</p>
+          <p><strong>Sala:</strong> 202</p>
+          <p class="subject">Especialista em Literatura</p>
+          <p style="margin-top: 1rem; font-size: 0.85rem;">Ter/Qui: 15h-17h</p>
+        </div>
+      </div>
+      <div class="student-card">
+        <img src="https://via.placeholder.com/250x350?text=Professor+3" alt="Prof. Carlos Mendes" class="student-image">
+        <div class="student-overlay">
+          <h3>Prof. Carlos Mendes</h3>
+          <p><strong>Disciplina:</strong> História</p>
+          <p><strong>Sala:</strong> 203</p>
+          <p class="subject">Especialista em História Brasileira</p>
+          <p style="margin-top: 1rem; font-size: 0.85rem;">Seg/Qui: 13h-15h</p>
+        </div>
+      </div>
+      <div class="student-card">
+        <img src="https://via.placeholder.com/250x350?text=Professor+4" alt="Profa. Juliana Gomes" class="student-image">
+        <div class="student-overlay">
+          <h3>Profa. Juliana Gomes</h3>
+          <p><strong>Disciplina:</strong> Ciências</p>
+          <p><strong>Sala:</strong> 204</p>
+          <p class="subject">Especialista em Biologia</p>
+          <p style="margin-top: 1rem; font-size: 0.85rem;">Ter/Sex: 14h-16h</p>
+        </div>
+      </div>
+      <div class="student-card">
+        <img src="https://via.placeholder.com/250x350?text=Professor+5" alt="Prof. Rafael Alves" class="student-image">
+        <div class="student-overlay">
+          <h3>Prof. Rafael Alves</h3>
+          <p><strong>Disciplina:</strong> Inglês</p>
+          <p><strong>Sala:</strong> 205</p>
+          <p class="subject">Especialista em Conversação</p>
+          <p style="margin-top: 1rem; font-size: 0.85rem;">Seg/Qua: 15h-17h</p>
+        </div>
+      </div>
+      <div class="student-card">
+        <img src="https://via.placeholder.com/250x350?text=Professor+6" alt="Profa. Isabela Lima" class="student-image">
+        <div class="student-overlay">
+          <h3>Profa. Isabela Lima</h3>
+          <p><strong>Disciplina:</strong> Educação Física</p>
+          <p><strong>Sala:</strong> Ginásio</p>
+          <p class="subject">Especialista em Esportes</p>
+          <p style="margin-top: 1rem; font-size: 0.85rem;">Ter/Sex: 13h-15h</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO CALENDÁRIO DE EVENTOS -->
+  <section>
+    <h2 class="section-title">📅 Calendário de Provas e Trabalhos</h2>
+    <div style="overflow-x: auto;">
+      <table class="events-table">
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>Disciplina</th>
+            <th>Tipo</th>
+            <th>Descrição</th>
+            <th>Turmas</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>15/11/2024</td>
+            <td>Matemática</td>
+            <td><span class="event-type prova">Prova</span></td>
+            <td>Álgebra e Geometria</td>
+            <td>3º Ano A, B, C</td>
+          </tr>
+          <tr>
+            <td>16/11/2024</td>
+            <td>Português</td>
+            <td><span class="event-type trabalho">Trabalho</span></td>
+            <td>Análise de Texto Literário</td>
+            <td>3º Ano A, B, C</td>
+          </tr>
+          <tr>
+            <td>18/11/2024</td>
+            <td>História</td>
+            <td><span class="event-type prova">Prova</span></td>
+            <td>História do Brasil - Período Colonial</td>
+            <td>3º Ano A, B</td>
+          </tr>
+          <tr>
+            <td>20/11/2024</td>
+            <td>Ciências</td>
+            <td><span class="event-type trabalho">Trabalho</span></td>
+            <td>Projeto de Biologia - Ecossistemas</td>
+            <td>3º Ano C</td>
+          </tr>
+          <tr>
+            <td>22/11/2024</td>
+            <td>Inglês</td>
+            <td><span class="event-type prova">Prova</span></td>
+            <td>Vocabulário e Gramática</td>
+            <td>3º Ano A, B, C</td>
+          </tr>
+          <tr>
+            <td>25/11/2024</td>
+            <td>Matemática</td>
+            <td><span class="event-type trabalho">Trabalho</span></td>
+            <td>Lista de Exercícios - Cálculo</td>
+            <td>3º Ano B</td>
+          </tr>
+          <tr>
+            <td>27/11/2024</td>
+            <td>Português</td>
+            <td><span class="event-type prova">Prova</span></td>
+            <td>Redação e Interpretação</td>
+            <td>3º Ano A, C</td>
+          </tr>
+          <tr>
+            <td>29/11/2024</td>
+            <td>História</td>
+            <td><span class="event-type trabalho">Trabalho</span></td>
+            <td>Seminário - Revolução Francesa</td>
+            <td>3º Ano B, C</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="melhores-alunos.html">Melhores Alunos</a></li>
+          <li><a href="professores.html">Professores</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Acesso Rápido</h4>
+        <ul>
+          <li><a href="login-aluno.html">Login Aluno</a></li>
+          <li><a href="login-professor.html">Login Professor</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contato</h4>
+        <ul>
+          <li>Email: contato@colegio.edu.br</li>
+          <li>Telefone: (45) 3521-1234</li>
+          <li>Foz do Iguaçu, PR</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Colégio Estadual Cívico-Militar Tancredo de Almeida Neves. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
