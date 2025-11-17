@@ -1,10 +1,6 @@
-// ===================================
-// PERFIL DO ALUNO
-// ===================================
 
-// Dados adicionais dos alunos
 const studentData = {
-  'joao.silva@colegio.edu.br': {
+  'joao.silva@escola.pr.gov.br': {
     grades: {
       'Matemática': 9.5,
       'Português': 8.7,
@@ -12,7 +8,7 @@ const studentData = {
       'Ciências': 8.9
     }
   },
-  'maria.oliveira@colegio.edu.br': {
+  'maria.oliveira@escola.pr.gov.br': {
     grades: {
       'Matemática': 8.8,
       'Português': 9.7,
@@ -22,13 +18,10 @@ const studentData = {
   }
 };
 
-// Verificar autenticação
 checkAuth();
 
-// Obter dados do usuário
 const user = getCurrentUser();
 
-// Preencher informações pessoais
 document.getElementById('studentName').textContent = user.name;
 document.getElementById('studentClass').textContent = user.class;
 document.getElementById('userDisplay').textContent = '👤 ' + user.name.split(' ')[0];
@@ -37,7 +30,6 @@ document.getElementById('birthDate').textContent = user.birthDate;
 document.getElementById('email').textContent = user.email;
 document.getElementById('phone').textContent = user.phone;
 
-// Preencher notas
 const gradesContainer = document.getElementById('gradesContainer');
 const grades = studentData[user.email]?.grades || {};
 

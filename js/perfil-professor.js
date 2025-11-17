@@ -1,10 +1,6 @@
-// ===================================
-// PERFIL DO PROFESSOR
-// ===================================
 
-// Dados adicionais dos professores
 const teacherData = {
-  'roberto.martins@colegio.edu.br': {
+  'roberto.martins@escola.pr.gov.br': {
     events: [
       { date: '15/11/2024', type: 'prova', description: 'Álgebra e Geometria', classes: '3º Ano A, B, C' },
       { date: '22/11/2024', type: 'prova', description: 'Cálculo', classes: '3º Ano A, B' },
@@ -12,7 +8,7 @@ const teacherData = {
       { date: '30/11/2024', type: 'prova', description: 'Trigonometria', classes: '3º Ano C' }
     ]
   },
-  'fernanda.souza@colegio.edu.br': {
+  'fernanda.souza@escola.pr.gov.br': {
     events: [
       { date: '16/11/2024', type: 'trabalho', description: 'Análise de Texto Literário', classes: '3º Ano A, B, C' },
       { date: '27/11/2024', type: 'prova', description: 'Redação e Interpretação', classes: '3º Ano A, C' },
@@ -22,13 +18,10 @@ const teacherData = {
   }
 };
 
-// Verificar autenticação
 checkAuth();
 
-// Obter dados do usuário
 const user = getCurrentUser();
 
-// Preencher informações profissionais
 document.getElementById('teacherName').textContent = user.name;
 document.getElementById('teacherDepartment').textContent = user.department;
 document.getElementById('userDisplay').textContent = '👤 ' + user.name.split(' ')[0];
@@ -38,7 +31,6 @@ document.getElementById('phone').textContent = user.phone;
 document.getElementById('office').textContent = user.office;
 document.getElementById('officeHours').textContent = user.officeHours;
 
-// Preencher eventos
 const eventsContainer = document.getElementById('eventsContainer');
 const events = teacherData[user.email]?.events || [];
 
