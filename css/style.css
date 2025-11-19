@@ -35,10 +35,6 @@ a {
   transition: color 0.3s ease;
 }
 
-a:hover {
-  color: var(--secondary-green);
-}
-
 header {
   background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-blue) 100%);
   color: var(--white);
@@ -172,6 +168,7 @@ nav a:hover {
   transition: all 0.3s ease;
   text-decoration: none;
   display: inline-block;
+  color: white;
 }
 
 .btn-primary {
